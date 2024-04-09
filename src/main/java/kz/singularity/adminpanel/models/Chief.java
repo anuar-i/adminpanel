@@ -10,13 +10,15 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="chief_dish")
+@Table(name="chief")
 @Getter
 @Setter
 @ToString
-public class chiefDish {
+public class Chief {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-
+  private String fio;
+  private String description;
+  private boolean isOnline;
 }
