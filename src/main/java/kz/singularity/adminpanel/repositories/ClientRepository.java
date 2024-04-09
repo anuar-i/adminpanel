@@ -1,3 +1,4 @@
+/*
 package kz.singularity.adminpanel.repositories;
 
 import kz.singularity.adminpanel.models.Client;
@@ -10,3 +11,4 @@ public interface ClientRepository extends JpaRepository <Client, Long>{
 
 
 }
+*/

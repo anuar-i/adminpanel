@@ -1,3 +1,4 @@
+/*
 package kz.singularity.adminpanel.models;
 
 import jakarta.persistence.Entity;
@@ -16,6 +17,5 @@ public class Order {
   @ManyToOne
   private Client client;
 
-
-
 }
+*/
