@@ -1,13 +1,14 @@
 package kz.singularity.adminpanel.controllers;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomePageController {
+public class OrderController {
 
-    @GetMapping("/home")
-    public String HomePageMenu(){
-        return "HomePage";
+    @GetMapping("/order")
+    public String ordersMenu(){
+        return "order";
     }
 }

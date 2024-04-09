@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomePageController {
+public class ReportController {
 
-    @GetMapping("/home")
-    public String HomePageMenu(){
-        return "HomePage";
+    @GetMapping("/report")
+    public String reportMenu(){
+        return "report";
     }
 }
