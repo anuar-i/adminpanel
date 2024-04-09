@@ -6,3 +6,9 @@ CREATE TABLE client (
 );
 
 insert into client values ( 1, 'fio', 'phone1', 'addresss');
+
+CREATE table Chief_Dish(
+    chief_id int REFERENCES Chief(id),
+    dish_id int REFERENCES  Dish(id),
+    PRIMARY KEY (chief_id,dish_id)
+);

@@ -1,13 +1,11 @@
 package kz.singularity.adminpanel.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.util.List;
 
 @Entity
 @Table(name="chief")
@@ -21,4 +19,12 @@ public class Chief {
   private String fio;
   private String description;
   private boolean isOnline;
+
+  @ManyToMany
+  @JoinTable(
+          name = "Chief_Dish",
+          joinColumns = @JoinColumn(name = "chief_id"),
+          inverseJoinColumns = @JoinColumn(name = "dish_id")
+  )
+  private List<Dish> dishList;
 }

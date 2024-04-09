@@ -1,10 +1,8 @@
 package kz.singularity.adminpanel.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name="dish")
@@ -17,4 +15,6 @@ public class Dish {
   private String description;
   private String composition;
 
+@ManyToMany(mappedBy = "dishList")
+  private List<Chief> chiefList;
 }
