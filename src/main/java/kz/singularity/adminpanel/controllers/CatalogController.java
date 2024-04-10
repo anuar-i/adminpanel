@@ -8,6 +8,7 @@ public class CatalogController {
 
     @GetMapping("/catalog")
     public String catalogMenu(){
+
         return "catalog";
     }
 }

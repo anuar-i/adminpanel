@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.aspectj.weaver.ast.Or;
 
 import java.util.List;
 
@@ -27,4 +28,7 @@ public class Chief {
           inverseJoinColumns = @JoinColumn(name = "dish_id")
   )
   private List<Dish> dishList;
+
+  @OneToMany(mappedBy = "chief")
+  private List<Order> orderList;
 }
